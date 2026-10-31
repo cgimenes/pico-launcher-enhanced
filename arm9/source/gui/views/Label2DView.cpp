@@ -64,8 +64,12 @@ void Label2DView::VBlank()
 {
     if (_tileBufferUpdated && _vramAddress)
     {
-        memcpy((void*)_vramAddress, _tileBuffer.get(), _tileBufferSize);
+        // Cleared before the copy, not after: the io thread can preempt this and
+        // finish a whole new text meanwhile, and clearing afterwards would erase
+        // that request, leaving the old (or blank) text on screen for good.
+        // A copy torn by such a preemption is redone next frame.
         _tileBufferUpdated = false;
         _stringWidth = _newStringWidth;
+        memcpy((void*)_vramAddress, _tileBuffer.get(), _tileBufferSize);
     }
 }

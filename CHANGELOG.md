@@ -2,6 +2,14 @@
 
 ## Enhanced fork
 
+### Unreleased
+
+#### Fixed
+- Wrong, repeated or blank titles in the file list, including names from the folder you just left
+  after going to the parent folder. The picture of a title is copied to video memory once per
+  frame, and a title finished while that copy was running could be forgotten, leaving the row
+  with its previous text for good.
+
 ### [enhanced-v1.10.0]
 
 #### Added
