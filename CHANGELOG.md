@@ -4,6 +4,11 @@
 
 ### Unreleased
 
+#### Added
+- A switch to start with the "Favorites only" filter on. With `"favoritesFilterAtStart": true` in
+  `settings.json` the browser shows only folders and favorites at launch. Turning the filter on
+  or off in the menu still works and is not saved. Off by default.
+
 #### Fixed
 - Rare garbled titles and icons when scrolling fast. The information loaded for a game could be
   freed while it was still being read to build its row; the row that is loading it now frees it
