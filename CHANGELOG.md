@@ -8,6 +8,12 @@
 - A switch to start with the "Favorites only" filter on. With `"favoritesFilterAtStart": true` in
   `settings.json` the browser shows only folders and favorites at launch. Turning the filter on
   or off in the menu still works and is not saved. Off by default.
+- A status bar along the top of the top screen: the time (24 hours, from the console's clock) at
+  the left and a battery meter at the right. The DSi shows four levels and turns green while
+  charging; the original DS and DS Lite can only tell a low battery from a good one, so the meter
+  there is full or one bar, red when low. Material shows it. A custom theme does not unless it sets
+  `"topStatusBar": { "hidden": false }`, so existing themes look as before; a theme can also replace
+  the bar art (`statusBar.bin`, `statusBarBattery.bin`) and set the positions and colors.
 
 #### Fixed
 - Rare garbled titles and icons when scrolling fast. The information loaded for a game could be
