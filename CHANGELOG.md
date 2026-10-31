@@ -23,6 +23,8 @@
     that copy was running could be forgotten, leaving the row with its previous text for good.
   - A row's title could be built by two threads at once when the focus moved onto it, and a new
     row showed whatever the previous one had left in video memory until its own title was ready.
+- The display settings sheet opens with focus on the selected layout instead of always the first
+  one, so a second layout no longer looks selected too.
 
 ### [enhanced-v1.10.0]
 
