@@ -2,6 +2,14 @@
 
 ## Enhanced fork
 
+### Unreleased
+
+#### Fixed
+- Folders with many games no longer end up with blank titles after opening the launcher or
+  scrolling with L and R. A load that was cancelled before it started could corrupt the list of
+  pending loads and make later ones get dropped, leaving their rows without a title. The queue
+  also stops with an error, instead of writing outside its memory, if it ever runs out of slots.
+
 ### [enhanced-v1.10.0]
 
 #### Added
