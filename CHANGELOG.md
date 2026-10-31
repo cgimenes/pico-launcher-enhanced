@@ -9,6 +9,10 @@
   after going to the parent folder. The picture of a title is copied to video memory once per
   frame, and a title finished while that copy was running could be forgotten, leaving the row
   with its previous text for good.
+- Titles that came out mixed up when moving fast with L and R, and the old folder's names
+  flashing for a moment when entering or leaving a folder. A row's title could be drawn by two
+  threads at once when the focus moved onto it, and a new row showed whatever the previous one
+  had left in video memory until its own title was ready.
 
 ### [enhanced-v1.10.0]
 
